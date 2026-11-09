@@ -1,0 +1,6 @@
+.pi/sessions/
+.pi/cache/
+.env
+auth.json
+*.log
+
