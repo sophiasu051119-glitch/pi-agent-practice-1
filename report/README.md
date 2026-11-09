@@ -105,5 +105,5 @@ pi install npm:pi-web-access
 - [x] 安装 PPT Skill 到项目目录。
 - [x] 重启 Pi 并调用 PPT Skill。
 - [x] 整理全部真实截图。
-- [ ] 提交教师仓库 Issue。
+- [x] 提交教师仓库 Issue：[实践课1： Pi Agent安装与使用 suke（#85）](https://github.com/hunnuOpenSourceSoftware2026/assignments/issues/85)。
 
