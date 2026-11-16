@@ -1,0 +1,32 @@
+flowchart LR
+    telemetry[telemetry]
+    schema[schema]
+    chord[chord]
+    tui[tui]
+    codemode[codemode]
+    mcp[mcp]
+    ai[ai]
+    durable[durable]
+    env[env]
+    agent[agent]
+    coding_agent[coding-agent]
+
+    chord --> schema
+    chord --> telemetry
+    ai --> schema
+    ai --> telemetry
+    durable --> chord
+    durable --> ai
+    durable --> codemode
+    durable --> schema
+    durable --> telemetry
+    env --> chord
+    env --> durable
+    agent --> ai
+    agent --> schema
+    coding_agent --> agent
+    coding_agent --> ai
+    coding_agent --> codemode
+    coding_agent --> mcp
+    coding_agent --> tui
+
