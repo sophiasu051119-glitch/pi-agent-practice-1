@@ -23,7 +23,7 @@ const response = await streamFunction(config.model, llmContext, {
 
 源码位置：[agent-loop.ts 中的模型调用日志](https://github.com/tri-queens-code-lab/pi-hunnu-2026/blob/practice-4-suke/packages/agent/src/agent-loop.ts#L410-L414)
 
-<!-- S1：在此处插入 practice-4/screenshots/S1-agent-before-model.png -->
+![S1：模型调用前日志](practice-4/screenshots/S1-agent-before-model.png)
 
 ### 1.2 工具结果加入上下文后打印日志
 
@@ -39,7 +39,7 @@ for (const result of toolResults) {
 
 源码位置：[agent-loop.ts 中的工具结果日志](https://github.com/tri-queens-code-lab/pi-hunnu-2026/blob/practice-4-suke/packages/agent/src/agent-loop.ts#L282-L287)
 
-<!-- S2：在此处插入 practice-4/screenshots/S2-tool-result-context.png -->
+![S2：工具结果加入上下文日志](practice-4/screenshots/S2-tool-result-context.png)
 
 ## 2. 重新检查、编译与启动
 
@@ -66,7 +66,9 @@ Built packages\coding-agent\dist\bundle (84 files, 9.4 MiB)
 0
 ```
 
-<!-- S3：在此处插入 practice-4/screenshots/S3-build-success.png -->
+![S3a：执行完整构建](practice-4/screenshots/S3a-build-start.png)
+
+![S3b：构建成功且退出码为 0](practice-4/screenshots/S3b-build-success.png)
 
 启动编译产物：
 
@@ -76,7 +78,7 @@ node .\packages\coding-agent\dist\cli.js
 
 程序成功打开 Pi 交互界面，版本为 `1.5.2`。
 
-<!-- S4：在此处插入 practice-4/screenshots/S4-pi-startup.png -->
+![S4：启动 Pi 交互界面](practice-4/screenshots/S4-pi-startup.png)
 
 ## 3. 两次会话的实际记录
 
@@ -112,7 +114,7 @@ Git 分支是一条独立的开发路线，让你可以在不影响主线代码�
 - 模型调用轮数：1 轮。
 - 结论：用户问题直接进入模型请求，模型一次返回最终答案，因此只出现一次“Agent 即将请求模型”。
 
-<!-- S5：在此处插入 practice-4/screenshots/S5-session-a.png -->
+![S5：会话 A 直接问答](practice-4/screenshots/S5-session-a.png)
 
 ### 3.2 会话 B：读取文件
 
@@ -148,7 +150,9 @@ Git 分支是一条独立的开发路线，让你可以在不影响主线代码�
 - 模型调用轮数：2 轮。
 - 结论：第一轮模型没有直接读取本地文件，而是返回 `read` 工具调用请求；本地 `coding-agent` 执行 `read`，`agent` 循环把工具结果加入上下文；第二轮模型请求因此能根据文件内容生成最终答案。
 
-<!-- S6：在此处插入 practice-4/screenshots/S6-session-b.png；一屏放不下时拆分 S6a、S6b -->
+![S6a：会话 B 的日志顺序与最终回答](practice-4/screenshots/S6a-session-b-logs.png)
+
+![S6b：read 工具记录、工具结果与最终回答](practice-4/screenshots/S6b-session-b-read-tool.png)
 
 ## 4. 两次运行对比
 
