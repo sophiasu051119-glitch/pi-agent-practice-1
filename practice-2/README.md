@@ -16,7 +16,15 @@
 
 ![组织成员与身份](screenshots/S2-organization-members.png)
 
+仓库主页截图同时展示了课程源码根目录中的 `packages/`、`scripts/`、`practice/`、`package.json` 等主要目录和文件，可确认小组仓库已包含完整课程源码，而不是空仓库。
+
 ## 2. 本地仓库信息
+
+实际克隆地址与命令为：
+
+```powershell
+git clone --branch main https://github.com/tri-queens-code-lab/pi-hunnu-2026.git
+```
 
 ```text
 本地路径：C:\Users\Sophi\Documents\Codex\2026-11-10\referenced-chatgpt-conversation-this-is-an\work\group-pi-hunnu-2026
@@ -26,6 +34,8 @@ origin：https://github.com/tri-queens-code-lab/pi-hunnu-2026.git
 upstream：https://github.com/hunnuOpenSourceSoftware2026/pi-hunnu-2026.git
 工作区状态：clean
 ```
+
+![个人本地克隆的路径、远程地址、分支与完整提交号](screenshots/S3-local-clone-info.png)
 
 ## 3. 根目录构建配置
 

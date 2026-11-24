@@ -101,6 +101,8 @@ npm run build
 Built packages\coding-agent\dist\bundle (84 files, 9.3 MiB)
 ```
 
+构建结束后 PowerShell 正常返回命令提示符，没有出现 `npm ERR!` 或 TypeScript 报错。随后对产物存在性和两个本地入口的版本进行了交叉核验。
+
 随后核验：
 
 ```powershell
@@ -118,6 +120,10 @@ True
 ```
 
 ![完整构建成功](screenshots/S5-build-success.png)
+
+为补充保留老师要求的明确退出码证据，我之后在同一源码项目完成下一次完整构建后，紧接着检查 `$LASTEXITCODE`，结果为 `0`；截图同时保留了构建末尾的 `Built packages\coding-agent\dist\bundle` 成功信息。
+
+![完整构建成功并显示退出码 0](screenshots/S5-build-exit-code.png)
 
 ![CLI 产物与版本核验](screenshots/S5-cli-verification.png)
 

@@ -65,9 +65,13 @@ npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 pi install npm:pi-web-access
 ```
 
-安装后，`pi list` 显示用户级包 `npm:pi-web-access`，路径为 `C:\Users\Sophi\.pi\agent\npm\node_modules\pi-web-access`。我重新启动 Pi，确认启动信息出现该扩展，并调用一个最小网页读取任务。
+安装后，`pi list` 显示用户级包 `npm:pi-web-access`，路径为 `C:\Users\Sophi\.pi\agent\npm\node_modules\pi-web-access`。
 
-![插件安装来源](../screenshots/S6-plugin-list.png)
+![插件安装后的包名、来源与本地路径](../screenshots/S6-plugin-list.png)
+
+我随后重新启动 Pi。启动页的 `[Extensions]` 区域显示 `pi-web-access:dist`，证明 Pi 已在新进程中发现并加载该扩展。
+
+![重新启动后加载 pi-web-access 扩展](../screenshots/S6-plugin-startup.png)
 
 我让插件获取 `https://example.com` 的网页标题。画面中出现了 `fetch` 工具调用，最后得到 `Example Domain`，说明插件不仅已经安装，而且能够实际完成网页读取。
 
